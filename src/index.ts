@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './configs/db';
 import { IErrorObject } from './types/interfaces';
-import exampleRoutes from './routes/exampleRoutes';
+import messageRoutes from './routes/chatRoutes';
 
 dotenv.config();
 
@@ -21,7 +21,7 @@ app.get('/', (_req: Request, res: Response) => {
 });
 
 // Actual Routes
-app.use('/example', exampleRoutes);
+app.use('/chats', messageRoutes);
 
 // Error handler for 404
 app.use((req: Request, _res: Response, next: NextFunction) => {

@@ -1,11 +1,10 @@
-import { Document } from "mongoose";
+import { Document } from 'mongoose';
 
-export interface IProduct {
-	title: string;
-	price: number;
-	productImage: string;
-	createdAt: Date;
+export interface IChat {
+	creator: {
+		name: string;
+		updated_at: Date;
+	};
 }
 
-export type ProductDocument = IProduct & Document;
-
+export type ChatDocument = IChat & Document;
