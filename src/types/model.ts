@@ -8,3 +8,16 @@ export interface IChat {
 }
 
 export type ChatDocument = IChat & Document;
+
+export interface IMessage {
+	message: string;
+	created_at: Date;
+}
+
+export interface IMessages {
+	sender_id: string;
+	sender_name: string;
+	messages: IMessage[];
+}
+
+export type MessageDocument = IMessage & Document;
